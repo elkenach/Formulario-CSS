@@ -30,11 +30,22 @@ a:hover{
 }
 
 .container{
-	display: flex;
-	justify-content: center;
+	background-image: url(img/ciudad.jpg);
+	background-size: cover;
+	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-color: purple;
+	display: flex;
+	justify-content: center;
+}
+
+.container:before {
+	content: "";
+	width: 100%;
+	height: 100vh;
+	background-color: #a87edd;
+	position: absolute;
+	opacity: 0.6; /* z-index :1; sepuede utilizar este tambien para subir la capa */
 }
 
 .loging-box{
@@ -42,7 +53,8 @@ a:hover{
 	height: 500px;
 	margin: auto;
 	background-color: white;
-	box-shadow: 10px 20px 2px 5px black;	
+	box-shadow: 15px 20px 20px black;	
+	position: relative;
 }
 
 .title-box{
@@ -53,9 +65,11 @@ a:hover{
 
 .title-box > h2 {
 	color: white;
-	font-size: 30px;
-	margin-top: auto;
-	font-weight: 100;
+	font-size: 28px;
+	margin-top: 30px;
+	margin-left: 20px;
+	font-weight: 90;
+	position: absolute;
 }
 
 .title-box >button {
@@ -103,29 +117,38 @@ a:hover{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background-color: green;
 	font-size: 18px;
 }
 
 #btn-facebook {
-	background-color: #3c5899;
+	background-color: #3B5998;	
 }
 
-#btn-github {
-	background-color: black;
+.fa-facebook {
+	padding-left:10px; 
+	margin-top: 10px;
 }
 
 #btn-twitter {
-	background-color: 
+	background-color: #08a0e9;
+}
+
+.fa-twitter {
+	padding-left:8px; 
+	margin-top: 10px;
 }
 
 #btn-singin {
-	width: 100%;
-	height: 20px;
-	border-radius: 5px;
+	width: 80%;
+	height: 40px;
+	border-radius: 3px;
 	background-color: #b485d8;
 	color: white;
 	font-weight: bolder; 
+	position: relative;
+	left: 25px;
+
+
 }
 
 .container-forgot {
